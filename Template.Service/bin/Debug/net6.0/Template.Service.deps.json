@@ -1,0 +1,60 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Template.Service/1.0.0": {
+        "dependencies": {
+          "Template.Database": "1.0.0",
+          "Template.Repository": "1.0.0"
+        },
+        "runtime": {
+          "Template.Service.dll": {}
+        }
+      },
+      "Template.Database/1.0.0": {
+        "dependencies": {
+          "Template.Model": "1.0.0"
+        },
+        "runtime": {
+          "Template.Database.dll": {}
+        }
+      },
+      "Template.Model/1.0.0": {
+        "runtime": {
+          "Template.Model.dll": {}
+        }
+      },
+      "Template.Repository/1.0.0": {
+        "runtime": {
+          "Template.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Template.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Template.Database/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Template.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Template.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
