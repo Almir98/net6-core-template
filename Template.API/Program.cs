@@ -1,11 +1,21 @@
+using Template.API.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddEndpointsApiExplorer();
+
+//Extension methods
+builder.Services.AddSwaggerConfiguration();
+builder.Services.AddApiVersioning();
+builder.Services.EnableCors();
+
+builder.Services.RegisterServices();
+builder.Services.AddAutoMapper(typeof(MapperConfiguration));
+
 
 var app = builder.Build();
 
@@ -21,5 +31,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+//Extension methods
+app.UseCors("CORS");
 
 app.Run();

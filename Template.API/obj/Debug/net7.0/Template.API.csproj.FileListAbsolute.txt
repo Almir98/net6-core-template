@@ -1,0 +1,7 @@
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.csproj.AssemblyReference.cache
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.AssemblyInfoInputs.cache
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.AssemblyInfo.cs
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.csproj.CoreCompileInputs.cache
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.MvcApplicationPartsAssemblyInfo.cache
