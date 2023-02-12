@@ -5,7 +5,7 @@ namespace Template.API.Extensions
 {
     public static class DbContextConfiguration
     {
-        public static void AddPersistance(IServiceCollection services, IConfiguration configuration)
+        public static void AddPersistance(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<TemplateDbContext>(
                 options => options.UseSqlServer(configuration.GetConnectionString("dbConnection")));

@@ -1077,6 +1077,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.2",
           "Template.Model": "1.0.0"
         },
         "compile": {

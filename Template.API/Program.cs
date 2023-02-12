@@ -9,12 +9,13 @@ builder.Services.AddControllers();
 //builder.Services.AddEndpointsApiExplorer();
 
 //Extension methods
+builder.Services.AddPersistance(builder.Configuration);
+builder.Services.RegisterServices();
+builder.Services.AddAutoMapper(typeof(MapperConfiguration));
 builder.Services.AddSwaggerConfiguration();
 builder.Services.AddApiVersioning();
 builder.Services.EnableCors();
 
-builder.Services.RegisterServices();
-builder.Services.AddAutoMapper(typeof(MapperConfiguration));
 
 
 var app = builder.Build();
