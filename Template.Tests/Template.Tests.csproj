@@ -21,8 +21,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Template.API\Template.API.csproj" />
-  </ItemGroup>
-
 </Project>

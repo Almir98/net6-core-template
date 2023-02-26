@@ -1295,58 +1295,44 @@
           }
         }
       },
-      "Template.Database/1.0.0": {
+      "Template.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.2",
-          "Microsoft.EntityFrameworkCore.Relational": "7.0.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
-          "Template.Model": "1.0.0"
+          "AutoMapper": "12.0.1",
+          "Template.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Template.Database.dll": {}
+          "bin/placeholder/Template.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Template.Database.dll": {}
+          "bin/placeholder/Template.Application.dll": {}
         }
       },
-      "Template.Model/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Template.Model.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Template.Model.dll": {}
-        }
-      },
-      "Template.Repository/1.0.0": {
+      "Template.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.2",
-          "Template.Model": "1.0.0"
+          "Microsoft.EntityFrameworkCore": "7.0.2"
         },
         "compile": {
-          "bin/placeholder/Template.Repository.dll": {}
+          "bin/placeholder/Template.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Template.Repository.dll": {}
+          "bin/placeholder/Template.Domain.dll": {}
         }
       },
-      "Template.Service/1.0.0": {
+      "Template.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Template.Database": "1.0.0",
-          "Template.Repository": "1.0.0"
+          "Template.Application": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Template.Service.dll": {}
+          "bin/placeholder/Template.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Template.Service.dll": {}
+          "bin/placeholder/Template.Infrastructure.dll": {}
         }
       }
     }
@@ -3951,25 +3937,20 @@
         "version.txt"
       ]
     },
-    "Template.Database/1.0.0": {
+    "Template.Application/1.0.0": {
       "type": "project",
-      "path": "../Template.Database/Template.Database.csproj",
-      "msbuildProject": "../Template.Database/Template.Database.csproj"
+      "path": "../Template.Application/Template.Application.csproj",
+      "msbuildProject": "../Template.Application/Template.Application.csproj"
     },
-    "Template.Model/1.0.0": {
+    "Template.Domain/1.0.0": {
       "type": "project",
-      "path": "../Template.Model/Template.Model.csproj",
-      "msbuildProject": "../Template.Model/Template.Model.csproj"
+      "path": "../Template.Repository/Template.Domain.csproj",
+      "msbuildProject": "../Template.Repository/Template.Domain.csproj"
     },
-    "Template.Repository/1.0.0": {
+    "Template.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Template.Repository/Template.Repository.csproj",
-      "msbuildProject": "../Template.Repository/Template.Repository.csproj"
-    },
-    "Template.Service/1.0.0": {
-      "type": "project",
-      "path": "../Template.Service/Template.Service.csproj",
-      "msbuildProject": "../Template.Service/Template.Service.csproj"
+      "path": "../Template.Service/Template.Infrastructure.csproj",
+      "msbuildProject": "../Template.Service/Template.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3983,7 +3964,7 @@
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.17.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Swashbuckle.AspNetCore.Swagger >= 6.5.0",
-      "Template.Service >= 1.0.0"
+      "Template.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4020,8 +4001,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Service\\Template.Service.csproj": {
-              "projectPath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Service\\Template.Service.csproj"
+            "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Service\\Template.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Service\\Template.Infrastructure.csproj"
             }
           }
         }

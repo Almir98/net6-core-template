@@ -24,11 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Template.Service\Template.Service.csproj" />
+    <Folder Include="Validations\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Validation\" />
+    <ProjectReference Include="..\Template.Service\Template.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

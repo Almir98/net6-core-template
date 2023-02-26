@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LTbt37evyUrpYF1TLB3UUUJCBPlAoKv67uiKY8qDL1mVyhd6QW/BTLo5o1hisCvoP570oUQySKBqI5WCQiqIyA==",
+  "dgSpecHash": "yppKXjGeOaVlyxkDmBlK7kEMDNpjW+fwVsNrcFIG0IMWP5dfK48EXQXdCuyhuxOubpbtFmOJzrCf26tE11hshg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Repository\\Template.Repository.csproj",
+  "projectFilePath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Repository\\Template.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Almir Tihak\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\Almir Tihak\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.2\\microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",

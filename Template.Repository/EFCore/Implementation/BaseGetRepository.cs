@@ -1,9 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Template.Service.Interfaces;
-
-namespace Template.Service.Services
+﻿namespace Template.Domain.EFCore
 {
-    public class BaseGetRepository<TKey, TModel, TContext> : IBaseGetRepository<TKey, TModel> where TContext : DbContext where TModel : class
+    public class BaseGetRepository<TKey, TEntity, TContext> : IBaseGetRepository<TKey, TEntity> where TContext : DbContext where TEntity : class
     {
         protected readonly TContext _context;
 
@@ -12,17 +9,17 @@ namespace Template.Service.Services
             _context = context;
         }
 
-        public async Task<List<TModel>> GetAll()
+        public async Task<List<TEntity>> GetAll()
         {
-            return await _context.Set<TModel>().AsNoTracking().ToListAsync();
+            return await _context.Set<TEntity>().AsNoTracking().ToListAsync();
         }
 
-        public async Task<TModel> GetById(TKey id)
+        public async Task<TEntity> GetById(TKey id)
         {
-            var entity = await _context.Set<TModel>().FindAsync(id);
+            var entity = await _context.Set<TEntity>().FindAsync(id);
 
             if (entity is null)
-                return null;
+                throw new ArgumentNullException(nameof(entity));
 
             return entity;
         }

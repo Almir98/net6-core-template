@@ -1,9 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
-
-namespace Template.Service.Interfaces
+﻿namespace Template.Service.Interfaces
 {
-    public interface IBaseCRUDRepository<Tkey, TEntity, TContext> : IBaseGetRepository<Tkey, TEntity> where TEntity : class where TContext : DbContext
+    public interface IBaseCRUDRepository<Tkey, TEntity> : IBaseGetRepository<Tkey, TEntity> where TEntity : class
     {
         Task<TEntity> Create(TEntity model);
         Task<TEntity> Update(Tkey id, TEntity model);

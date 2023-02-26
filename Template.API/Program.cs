@@ -1,5 +1,3 @@
-using Template.API.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,12 +8,14 @@ builder.Services.AddControllers();
 
 //Extension methods
 builder.Services.AddPersistance(builder.Configuration);
+
+builder.Services.RegisterRepositories();
 builder.Services.RegisterServices();
+
 builder.Services.AddAutoMapper(typeof(MapperConfiguration));
 builder.Services.AddSwaggerConfiguration();
 builder.Services.AddApiVersioning();
 builder.Services.EnableCors();
-
 
 
 var app = builder.Build();

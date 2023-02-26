@@ -216,16 +216,6 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
-      },
-      "Template.Model/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Template.Model.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Template.Model.dll": {}
-        }
       }
     }
   },
@@ -564,17 +554,11 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "Template.Model/1.0.0": {
-      "type": "project",
-      "path": "../Template.Model/Template.Model.csproj",
-      "msbuildProject": "../Template.Model/Template.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.EntityFrameworkCore >= 7.0.2",
-      "Template.Model >= 1.0.0"
+      "Microsoft.EntityFrameworkCore >= 7.0.2"
     ]
   },
   "packageFolders": {
@@ -585,9 +569,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Repository\\Template.Repository.csproj",
-      "projectName": "Template.Repository",
-      "projectPath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Repository\\Template.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Repository\\Template.Domain.csproj",
+      "projectName": "Template.Domain",
+      "projectPath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Repository\\Template.Domain.csproj",
       "packagesPath": "C:\\Users\\Almir Tihak\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Repository\\obj\\",
       "projectStyle": "PackageReference",
@@ -610,11 +594,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Model\\Template.Model.csproj": {
-              "projectPath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.Model\\Template.Model.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Template.Service.Interfaces;
-using Template.Service.Services;
-
-namespace Template.Repository.EFCore.Implementation
+﻿namespace Template.Domain.EFCore
 {
     public class BaseCRUDRepository<Tkey, TEntity, TContext> : BaseGetRepository<Tkey, TEntity, TContext>, IBaseCRUDRepository<Tkey, TEntity, TContext> where TEntity : class where TContext : DbContext
     {
@@ -29,7 +25,7 @@ namespace Template.Repository.EFCore.Implementation
             _context.Set<TEntity>().Attach(model);
             _context.Set<TEntity>().Update(model);
             await _context.SaveChangesAsync();
-
+            
             return model;
         }
 
