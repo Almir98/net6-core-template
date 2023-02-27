@@ -8,9 +8,15 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="Logging\" />
     <Folder Include="Caching\" />
     <Folder Include="Security\" />
+    <Folder Include="Validations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.1.2" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.2.2" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Dnb8MU63+rNPUKOS2DT+LiBUIHUEI0xlCwW/lFXWrc7LS14SvMIzff7iFw40wYSu5+cF98rY1MVcjA6c/eQd9g==",
+  "dgSpecHash": "y/lL0e8+2NbkaAbrk5fBqf5iaztgtC9A1ddpsuc1qKNdhp0Px+2jRQayMgtHEaI20QovnABDz0ds+iWNANniRg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Almir Tihak\\source\\repos\\Template\\Template.API\\Template.API.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,9 @@
     "C:\\Users\\Almir Tihak\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Almir Tihak\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Almir Tihak\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Almir Tihak\\.nuget\\packages\\nlog\\5.1.2\\nlog.5.1.2.nupkg.sha512",
+    "C:\\Users\\Almir Tihak\\.nuget\\packages\\nlog.extensions.logging\\5.2.2\\nlog.extensions.logging.5.2.2.nupkg.sha512",
+    "C:\\Users\\Almir Tihak\\.nuget\\packages\\nlog.web.aspnetcore\\5.2.2\\nlog.web.aspnetcore.5.2.2.nupkg.sha512",
     "C:\\Users\\Almir Tihak\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Almir Tihak\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Almir Tihak\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

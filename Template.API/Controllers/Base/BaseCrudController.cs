@@ -5,14 +5,15 @@
     public class BaseCrudController<Tkey, TModel, TEntity> : ControllerBase where TModel : class where TEntity : class
     {
         private readonly IBaseCrudService<Tkey, TModel, TEntity> _baseCrudService;
+        private readonly ILoggerManager _logger;
 
-        // Add logger
 
         // Add Fluent validation
 
-        public BaseCrudController(IBaseCrudService<Tkey, TModel, TEntity> baseCrudService)
+        public BaseCrudController(IBaseCrudService<Tkey, TModel, TEntity> baseCrudService, ILoggerManager logger)
         {
             _baseCrudService = baseCrudService;
+            _logger = logger;
         }
 
         [HttpPost]
@@ -21,11 +22,14 @@
             try
             {
                 await _baseCrudService.Create(model);
+                _logger.LogInfo("");
+                
                 return Ok();
 
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "");
                 return StatusCode(500);
             }
         }
@@ -39,10 +43,13 @@
                     return BadRequest("Invalid parameter");
 
                 await _baseCrudService.Update(id, model);
+                _logger.LogInfo("");
+
                 return Ok();
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "");
                 return StatusCode(500);
             }
         }
@@ -56,11 +63,15 @@
                     return BadRequest("Invalid parameter");
 
                 await _baseCrudService.Delete(id);
+                _logger.LogInfo("");
+
                 return Ok();
             }
             catch (Exception ex)
             {
                 //_logger.LogError(ex, "POST:/create-template");
+                _logger.LogError(ex, "");
+
                 return StatusCode(500);
             }
         }

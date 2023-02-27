@@ -5,12 +5,12 @@
     public class BaseGetController<TKey, TModel> : ControllerBase where TModel : class
     {
         private readonly IBaseGetService<TKey, TModel> _baseGetService;
-        // Add logger
+        private readonly ILoggerManager _logger;
 
-
-        public BaseGetController(IBaseGetService<TKey, TModel> baseGetService)
+        public BaseGetController(IBaseGetService<TKey, TModel> baseGetService, ILoggerManager logger)
         {
             _baseGetService = baseGetService;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -19,10 +19,13 @@
             try
             {
                 await _baseGetService.GetAllAsync();
+                _logger.LogInfo("");
+
                 return Ok();
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "");
                 return StatusCode(500);
             }
         }
@@ -33,10 +36,13 @@
             try
             {
                 await _baseGetService.GetByIdAsync(id);
+                _logger.LogInfo("");
+
                 return Ok();
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "");
                 return StatusCode(500);
             }
         }
