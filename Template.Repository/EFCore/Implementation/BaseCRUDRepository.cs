@@ -1,6 +1,6 @@
 ﻿namespace Template.Domain.EFCore
 {
-    public class BaseCRUDRepository<Tkey, TEntity, TContext> : BaseGetRepository<Tkey, TEntity, TContext>, IBaseCRUDRepository<Tkey, TEntity, TContext> where TEntity : class where TContext : DbContext
+    public class BaseCRUDRepository<Tkey, TEntity, TContext> : BaseGetRepository<Tkey, TEntity, TContext>, IBaseCRUDRepository<Tkey, TEntity> where TEntity : class where TContext : DbContext
     {
         public BaseCRUDRepository(TContext context) : base(context)
         {
@@ -29,17 +29,17 @@
             return model;
         }
 
-        public void Delete(Tkey id)
+        public async Task Delete(Tkey id)
         {
             if (id is null)
                 throw new ArgumentException(nameof(id));
 
-            var entity = _context.Set<TEntity>().Find(id);
+            var entity = await _context.Set<TEntity>().FindAsync(id);
 
             if (entity is not null)
             {
                 _context.Set<TEntity>().Remove(entity);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
         }
     }

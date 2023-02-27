@@ -4,6 +4,6 @@
     {
         Task<TEntity> Create(TEntity model);
         Task<TEntity> Update(Tkey id, TEntity model);
-        void Delete(Tkey id);
+        Task Delete(Tkey id);
     }
 }

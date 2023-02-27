@@ -6,6 +6,6 @@
 
         Task<TEntity> Update(Tkey id, TModel model);
         
-        void Delete(Tkey id);
+        Task Delete(Tkey id);
     }
 }

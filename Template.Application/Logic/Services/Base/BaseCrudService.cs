@@ -3,8 +3,10 @@
     public class BaseCrudService<Tkey, TModel, TEntity> : BaseGetService<Tkey, TModel>, IBaseCrudService<Tkey, TModel, TEntity> where TModel : class where TEntity : class
     {
         protected readonly IBaseCRUDRepository<Tkey, TEntity> _baseCrudRepository;        // ?????
-        public BaseCrudService(IBaseGetRepository<Tkey, TModel> baseGetRepository, IMapper mapper) : base(baseGetRepository, mapper)
+
+        public BaseCrudService(IBaseGetRepository<Tkey, TModel> baseGetRepository, IMapper mapper, IBaseCRUDRepository<Tkey, TEntity> baseCrudRepository) : base(baseGetRepository, mapper)
         {
+            _baseCrudRepository = baseCrudRepository;
         }
 
         public async Task<TEntity> Create(TModel model)
@@ -17,9 +19,9 @@
             return await _baseCrudRepository.Update(id, _mapper.Map<TEntity>(model));
         }
 
-        public void Delete(Tkey id)
+        public async Task Delete (Tkey id)
         {
-            _baseCrudRepository.Delete(id);
+           await _baseCrudRepository.Delete(id);
         }
     }
 }
