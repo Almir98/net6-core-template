@@ -7,9 +7,6 @@
         private readonly IBaseCrudService<Tkey, TModel, TEntity> _baseCrudService;
         private readonly ILoggerManager _logger;
 
-
-        // Add Fluent validation
-
         public BaseCrudController(IBaseCrudService<Tkey, TModel, TEntity> baseCrudService, ILoggerManager logger)
         {
             _baseCrudService = baseCrudService;
@@ -23,9 +20,8 @@
             {
                 await _baseCrudService.Create(model);
                 _logger.LogInfo("");
-                
-                return Ok();
 
+                return Ok();
             }
             catch (Exception ex)
             {

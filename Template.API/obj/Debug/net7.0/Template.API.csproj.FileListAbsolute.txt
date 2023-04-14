@@ -82,3 +82,7 @@ C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\refint\
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.pdb
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.genruntimeconfig.cache
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\ref\Template.API.dll
+C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\nlog.config
+C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.dll
+C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
