@@ -8,8 +8,11 @@
         /// <param name="services"></param>
         public static void RegisterRepositories(this IServiceCollection services)
         {
-            services.AddScoped<object, object>();
+            // READ operations
+            services.AddSingleton<IBaseGetRepository<int, TemplateEntity1>, BaseGetRepository<int, TemplateEntity1, TemplateDbContext>>();
 
+            // CRUD operations
+            services.AddSingleton<IBaseCRUDRepository<int, TemplateEntity2>, BaseCRUDRepository<int, TemplateEntity2, TemplateDbContext>>();
         }
     }
 }

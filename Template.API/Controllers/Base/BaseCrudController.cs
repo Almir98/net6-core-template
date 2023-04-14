@@ -19,13 +19,13 @@
             try
             {
                 await _baseCrudService.Create(model);
-                _logger.LogInfo("");
+                _logger.LogInfo("Post method created");
 
                 return Ok();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "");
+                _logger.LogError(ex, "POST:/create-template");
                 return StatusCode(500);
             }
         }
@@ -39,13 +39,13 @@
                     return BadRequest("Invalid parameter");
 
                 await _baseCrudService.Update(id, model);
-                _logger.LogInfo("");
+                _logger.LogInfo("Update method created");
 
                 return Ok();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "");
+                _logger.LogError(ex, "UPDATE:/update-template");
                 return StatusCode(500);
             }
         }
@@ -59,14 +59,13 @@
                     return BadRequest("Invalid parameter");
 
                 await _baseCrudService.Delete(id);
-                _logger.LogInfo("");
+                _logger.LogInfo("Deleted method created");
 
                 return Ok();
             }
             catch (Exception ex)
             {
-                //_logger.LogError(ex, "POST:/create-template");
-                _logger.LogError(ex, "");
+                _logger.LogError(ex, "DELETE:/delete-template");
 
                 return StatusCode(500);
             }

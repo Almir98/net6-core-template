@@ -19,13 +19,13 @@
             try
             {
                 await _baseGetService.GetAllAsync();
-                _logger.LogInfo("");
+                _logger.LogInfo("GetAll method created");
 
                 return Ok();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "");
+                _logger.LogError(ex, "GET:/get-all");
                 return StatusCode(500);
             }
         }
@@ -36,13 +36,13 @@
             try
             {
                 await _baseGetService.GetByIdAsync(id);
-                _logger.LogInfo("");
+                _logger.LogInfo("GetId method created");
 
                 return Ok();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "");
+                _logger.LogError(ex, "GET:/get-by-id");
                 return StatusCode(500);
             }
         }

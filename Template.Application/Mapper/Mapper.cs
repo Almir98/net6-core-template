@@ -4,9 +4,8 @@
     {
         public Mapper()
         {
-            CreateMap<object, object>().ReverseMap();
-
-
+            CreateMap<TemplateEntity1Dto, TemplateEntity1>().ReverseMap();
+            CreateMap<TemplateEntity2Dto, TemplateEntity2>().ReverseMap();
         }
     }
 }
