@@ -16,13 +16,4 @@ public class TemplateDbContext : DbContext
             optionsBuilder.UseSqlServer("Server=.;Database=TemplateDb;User Id=AlmirT;Password=11101998at.;Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true;");
         }
     }
-
-    /// <summary>
-    /// Use this method for FluentAPI configuration.
-    /// </summary>
-    /// <param name="modelBuilder"></param>
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-    }
 }

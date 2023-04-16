@@ -2,9 +2,9 @@
 
 [Route("api/[controller]")]
 [ApiController]
-public class TemplateGetController : BaseGetController<TemplateEntity1Dto>
+public class TemplateGetController : BaseGetController<TemplateEntity2Dto>
 {
-    public TemplateGetController(IBaseGetService<TemplateEntity1Dto> baseGetService, ILoggerManager logger) : base(baseGetService, logger)
+    public TemplateGetController(IBaseGetService<TemplateEntity2Dto> baseGetService, ILoggerManager logger) : base(baseGetService, logger)
     {
     }
 }

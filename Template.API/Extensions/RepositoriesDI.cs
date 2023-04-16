@@ -9,7 +9,7 @@ public static class RepositoriesDI
     public static void RegisterRepositories(this IServiceCollection services)
     {
         // READ operations
-        services.AddScoped<IBaseGetRepository<TemplateEntity1Dto>, BaseGetRepository<TemplateEntity1Dto, TemplateEntity1>>();
+        services.AddScoped<IBaseGetRepository<TemplateEntity2Dto>, BaseGetRepository<TemplateEntity2Dto, TemplateEntity2>>();
 
         // CRUD operations
         services.AddScoped<IBaseCRUDRepository<TemplateEntity2Dto>, BaseCRUDRepository<TemplateEntity2Dto, TemplateEntity2>>();

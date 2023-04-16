@@ -8,7 +8,7 @@ public static class ServicesDI
     public static void RegisterServices(this IServiceCollection services)
     {
         // READ operations
-        services.AddScoped<IBaseGetService<TemplateEntity1Dto>, BaseGetService<TemplateEntity1Dto>>();
+        services.AddScoped<IBaseGetService<TemplateEntity2Dto>, BaseGetService<TemplateEntity2Dto>>();
 
         // CRUD operations
         services.AddScoped<IBaseCrudService<TemplateEntity2Dto>, BaseCrudService<TemplateEntity2Dto>>();

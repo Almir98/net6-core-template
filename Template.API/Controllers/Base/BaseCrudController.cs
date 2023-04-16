@@ -18,10 +18,10 @@ public class BaseCrudController<TModel> : ControllerBase where TModel : class
     {
         try
         {
-            await _baseCrudService.Create(model);
+            var response = await _baseCrudService.Create(model);
             _logger.LogInfo("Post method created");
 
-            return Ok();
+            return Ok(response);
         }
         catch (Exception ex)
         {
@@ -38,10 +38,10 @@ public class BaseCrudController<TModel> : ControllerBase where TModel : class
             if (id == 0)
                 return BadRequest("Invalid parameter");
 
-            await _baseCrudService.Update(id, model);
+            var response = await _baseCrudService.Update(id, model);
             _logger.LogInfo("Update method created");
 
-            return Ok();
+            return Ok(response);
         }
         catch (Exception ex)
         {
@@ -57,7 +57,7 @@ public class BaseCrudController<TModel> : ControllerBase where TModel : class
         {
             if (id == 0)
                 return BadRequest("Invalid parameter");
-
+            
             await _baseCrudService.Delete(id);
             _logger.LogInfo("Deleted method created");
 

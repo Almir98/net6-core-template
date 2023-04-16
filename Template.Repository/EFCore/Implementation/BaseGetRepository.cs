@@ -1,12 +1,9 @@
-﻿using AutoMapper;
-
-namespace Template.Domain.EFCore;
+﻿namespace Template.Domain.EFCore;
 
 public class BaseGetRepository<TModel, TEntity> : IBaseGetRepository<TModel> where TModel : class where TEntity : class
 {
     protected readonly TemplateDbContext _context;
     protected readonly IMapper _mapper;
-
 
     public BaseGetRepository(TemplateDbContext context, IMapper mapper)
     {
@@ -29,9 +26,5 @@ public class BaseGetRepository<TModel, TEntity> : IBaseGetRepository<TModel> whe
             throw new ArgumentNullException(nameof(entity));
 
         return _mapper.Map<TModel>(entity);
-
-        //return entity;
-
-        return null;
     }
 }

@@ -8,7 +8,7 @@ builder.Services.ConfigureLoggerService();
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-//builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddEndpointsApiExplorer();
 
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 
@@ -19,8 +19,6 @@ builder.Services.AddPersistance(builder.Configuration);
 builder.Services.RegisterRepositories();
 
 builder.Services.RegisterServices();
-
-
 
 builder.Services.AddSwaggerConfiguration();
 //builder.Services.AddApiVersioning();

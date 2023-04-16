@@ -1,7 +1,6 @@
-﻿namespace Template.Domain.Entities
+﻿namespace Template.Domain.Entities;
+
+public abstract class BaseEntity<Tkey>
 {
-    public abstract class BaseEntity<Tkey>
-    {
-        public Tkey Id { get; set; } 
-    }
+    public Tkey Id { get; set; } 
 }

@@ -18,10 +18,10 @@ public class BaseGetController<TModel> : ControllerBase where TModel : class
     {
         try
         {
-            await _baseGetService.GetAllAsync();
+            var response = await _baseGetService.GetAllAsync();
             _logger.LogInfo("GetAll method created");
 
-            return Ok();
+            return Ok(response);
         }
         catch (Exception ex)
         {
@@ -35,10 +35,10 @@ public class BaseGetController<TModel> : ControllerBase where TModel : class
     {
         try
         {
-            await _baseGetService.GetByIdAsync(id);
+            var response = await _baseGetService.GetByIdAsync(id);
             _logger.LogInfo("GetId method created");
 
-            return Ok();
+            return Ok(response);
         }
         catch (Exception ex)
         {

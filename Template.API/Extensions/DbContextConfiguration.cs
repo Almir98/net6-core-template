@@ -1,6 +1,4 @@
-﻿using Template.Domain.Persistance;
-
-namespace Template.API.Extensions;
+﻿namespace Template.API.Extensions;
 
 public static class DbContextConfiguration
 {
