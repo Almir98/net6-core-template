@@ -1,9 +1,8 @@
-﻿namespace Template.Service.Interfaces
+﻿namespace Template.Service.Interfaces;
+
+public interface IBaseCRUDRepository<TModel> : IBaseGetRepository<TModel> where TModel : class
 {
-    public interface IBaseCRUDRepository<TEntity> : IBaseGetRepository<TEntity> where TEntity : class
-    {
-        Task<TEntity> Create(TEntity model);
-        Task<TEntity> Update(int id, TEntity model);
-        Task Delete(int id);
-    }
+    Task<TModel> Create(TModel model);
+    Task<TModel> Update(int id, TModel model);
+    Task Delete(int id);
 }

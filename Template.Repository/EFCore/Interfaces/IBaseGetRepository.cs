@@ -1,7 +1,7 @@
 ﻿namespace Template.Service.Interfaces;
 
-public interface IBaseGetRepository<TEntity> where TEntity : class
+public interface IBaseGetRepository<TModel> where TModel : class
 {
-    Task<List<TEntity>> GetAll();
-    Task<TEntity> GetById(int id);
+    Task<List<TModel>> GetAll();
+    Task<TModel> GetById(int id);
 }

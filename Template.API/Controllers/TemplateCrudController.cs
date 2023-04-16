@@ -1,6 +1,4 @@
-﻿using Template.API.Controllers.Base;
-
-namespace Template.API.Controllers;
+﻿namespace Template.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

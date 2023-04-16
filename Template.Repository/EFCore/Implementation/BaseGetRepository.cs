@@ -1,26 +1,37 @@
-﻿namespace Template.Domain.EFCore;
+﻿using AutoMapper;
 
-public class BaseGetRepository<TEntity> : IBaseGetRepository<TEntity> where TEntity : class
+namespace Template.Domain.EFCore;
+
+public class BaseGetRepository<TModel, TEntity> : IBaseGetRepository<TModel> where TModel : class where TEntity : class
 {
     protected readonly TemplateDbContext _context;
+    protected readonly IMapper _mapper;
 
-    public BaseGetRepository(TemplateDbContext context)
+
+    public BaseGetRepository(TemplateDbContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
-    public async Task<List<TEntity>> GetAll()
+    public async Task<List<TModel>> GetAll()
     {
-        return await _context.Set<TEntity>().AsNoTracking().ToListAsync();
+        var response = await _context.Set<TEntity>().AsNoTracking().ToListAsync();
+
+        return _mapper.Map<List<TModel>>(response);
     }
 
-    public async Task<TEntity> GetById(int id)
+    public async Task<TModel> GetById(int id)
     {
         var entity = await _context.Set<TEntity>().FindAsync(id);
 
         if (entity is null)
             throw new ArgumentNullException(nameof(entity));
 
-        return entity;
+        return _mapper.Map<TModel>(entity);
+
+        //return entity;
+
+        return null;
     }
 }

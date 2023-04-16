@@ -1,74 +1,73 @@
-﻿namespace Template.API.Controllers.Base
+﻿namespace Template.API.Controllers.Base;
+
+[Route("api/[controller]")]
+[ApiController]
+public class BaseCrudController<TModel> : ControllerBase where TModel : class
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BaseCrudController<TModel> : ControllerBase where TModel : class
+    private readonly IBaseCrudService<TModel> _baseCrudService;
+    private readonly ILoggerManager _logger;
+
+    public BaseCrudController(IBaseCrudService<TModel> baseCrudService, ILoggerManager logger)
     {
-        private readonly IBaseCrudService<TModel> _baseCrudService;
-        private readonly ILoggerManager _logger;
+        _baseCrudService = baseCrudService;
+        _logger = logger;
+    }
 
-        public BaseCrudController(IBaseCrudService<TModel> baseCrudService, ILoggerManager logger)
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody] TModel model)
+    {
+        try
         {
-            _baseCrudService = baseCrudService;
-            _logger = logger;
+            await _baseCrudService.Create(model);
+            _logger.LogInfo("Post method created");
+
+            return Ok();
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] TModel model)
+        catch (Exception ex)
         {
-            try
-            {
-                await _baseCrudService.Create(model);
-                _logger.LogInfo("Post method created");
-
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "POST:/create-template");
-                return StatusCode(500);
-            }
+            _logger.LogError(ex, "POST:/create-template");
+            return StatusCode(500);
         }
+    }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, TModel model)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, TModel model)
+    {
+        try
         {
-            try
-            {
-                if (id == 0)
-                    return BadRequest("Invalid parameter");
+            if (id == 0)
+                return BadRequest("Invalid parameter");
 
-                await _baseCrudService.Update(id, model);
-                _logger.LogInfo("Update method created");
+            await _baseCrudService.Update(id, model);
+            _logger.LogInfo("Update method created");
 
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "UPDATE:/update-template");
-                return StatusCode(500);
-            }
+            return Ok();
         }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        catch (Exception ex)
         {
-            try
-            {
-                if (id == 0)
-                    return BadRequest("Invalid parameter");
+            _logger.LogError(ex, "UPDATE:/update-template");
+            return StatusCode(500);
+        }
+    }
 
-                await _baseCrudService.Delete(id);
-                _logger.LogInfo("Deleted method created");
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
+        {
+            if (id == 0)
+                return BadRequest("Invalid parameter");
 
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "DELETE:/delete-template");
+            await _baseCrudService.Delete(id);
+            _logger.LogInfo("Deleted method created");
 
-                return StatusCode(500);
-            }
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "DELETE:/delete-template");
+
+            return StatusCode(500);
         }
     }
 }

@@ -2,9 +2,7 @@
 
 public class TemplateDbContext : DbContext
 {
-    public TemplateDbContext()
-    {
-    }
+    public TemplateDbContext() { }
 
     public TemplateDbContext(DbContextOptions<TemplateDbContext> options) : base(options) { }
 

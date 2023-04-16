@@ -5,6 +5,7 @@ global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.OpenApi.Models;
 global using NLog;
+global using Template.API.Controllers.Base;
 global using Template.API.Extensions;
 global using Template.Application.DTO;
 global using Template.Application.Logic.Interfaces;
