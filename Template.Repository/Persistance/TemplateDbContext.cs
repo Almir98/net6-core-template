@@ -15,7 +15,7 @@ public class TemplateDbContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=TemplateDb;Trusted_Connection=True;MultipleActiveResultSets=True");
+            optionsBuilder.UseSqlServer("Server=.;Database=TemplateDb;User Id=AlmirT;Password=11101998at.;Trusted_Connection=SSPI;Encrypt=false;TrustServerCertificate=true;");
         }
     }
 
