@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
     <Folder Include="Caching\" />
     <Folder Include="Security\" />
     <Folder Include="Validations\" />

@@ -18,7 +18,7 @@ builder.Services.AddPersistance(builder.Configuration);
 
 builder.Services.RegisterRepositories();
 
-//builder.Services.RegisterServices();
+builder.Services.RegisterServices();
 
 
 

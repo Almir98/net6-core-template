@@ -13,5 +13,4 @@ global using Template.Domain.EFCore;
 global using Template.Domain.Entities;
 global using Template.Infrastructure.Logging.Implementation;
 global using Template.Infrastructure.Logging;
-global using Template.Infrastructure.Persistance;
 global using Template.Service.Interfaces;

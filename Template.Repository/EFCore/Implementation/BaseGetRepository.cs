@@ -2,7 +2,7 @@
 
 public class BaseGetRepository<TEntity> : IBaseGetRepository<TEntity> where TEntity : class
 {
-    public TemplateDbContext _context;
+    protected readonly TemplateDbContext _context;
 
     public BaseGetRepository(TemplateDbContext context)
     {
