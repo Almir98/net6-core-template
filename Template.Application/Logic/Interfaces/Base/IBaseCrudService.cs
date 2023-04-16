@@ -1,11 +1,11 @@
-﻿namespace Template.Application.Logic.Interfaces
-{
-    public interface IBaseCrudService<Tkey, TModel, TEntity> : IBaseGetService<Tkey, TModel> where TModel : class where TEntity : class
-    {
-        Task<TEntity> Create(TModel model);
+﻿//namespace Template.Application.Logic.Interfaces
+//{
+//    public interface IBaseCrudService<Tkey, TModel, TEntity> : IBaseGetService<Tkey, TModel> where TModel : class where TEntity : class
+//    {
+//        Task<TEntity> Create(TModel model);
 
-        Task<TEntity> Update(Tkey id, TModel model);
-        
-        Task Delete(Tkey id);
-    }
-}
+//        Task<TEntity> Update(Tkey id, TModel model);
+
+//        Task Delete(Tkey id);
+//    }
+//}

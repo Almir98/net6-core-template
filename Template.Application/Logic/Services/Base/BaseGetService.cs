@@ -1,24 +1,23 @@
-﻿namespace Template.Application.Logic.Services
+﻿namespace Template.Application.Logic.Services;
+
+public class BaseGetService<TModel> : IBaseGetService<TModel> where TModel : class
 {
-    public class BaseGetService<Tkey, TModel> : IBaseGetService<Tkey, TModel> where TModel : class
+    protected readonly IBaseGetRepository<TModel> _baseGetRepository;
+    protected  readonly  IMapper _mapper;
+
+    public BaseGetService(IBaseGetRepository<TModel> baseGetRepository, IMapper mapper)
     {
-        protected readonly IBaseGetRepository<Tkey, TModel> _baseGetRepository;
-        protected  readonly  IMapper _mapper;
+        _baseGetRepository = baseGetRepository;
+        _mapper = mapper;
+    }
 
-        public BaseGetService(IBaseGetRepository<Tkey, TModel> baseGetRepository, IMapper mapper)
-        {
-            _baseGetRepository = baseGetRepository;
-            _mapper = mapper;
-        }
+    public async Task<List<TModel>> GetAllAsync()
+    {
+        return await _baseGetRepository.GetAll();
+    }
 
-        public async Task<List<TModel>> GetAllAsync()
-        {
-            return await _baseGetRepository.GetAll();
-        }
-
-        public async Task<TModel> GetByIdAsync(Tkey id)
-        {
-            return await _baseGetRepository.GetById(id);
-        }
+    public async Task<TModel> GetByIdAsync(int id)
+    {
+        return await _baseGetRepository.GetById(id);
     }
 }

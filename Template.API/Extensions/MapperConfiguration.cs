@@ -1,17 +1,14 @@
-﻿using AutoMapper;
+﻿namespace Template.API.Extensions;
 
-namespace Template.API.Extensions
+/// <summary>
+/// Represents a mapper configuration that defines how objects are mapped between different types. 
+/// </summary>
+public class MapperConfiguration : Profile
 {
-    /// <summary>
-    /// Represents a mapper configuration that defines how objects are mapped between different types. 
-    /// </summary>
-    public class MapperConfiguration : Profile
+    public MapperConfiguration()
     {
-        public MapperConfiguration()
-        {
-            // <Model, Entity>
+        // <Model, Entity>
 
-            CreateMap<object, object>().ReverseMap();
-        }
+        CreateMap<object, object>().ReverseMap();
     }
 }

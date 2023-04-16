@@ -2,12 +2,12 @@
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BaseGetController<TKey, TModel> : ControllerBase where TModel : class
+    public class BaseGetController<TModel> : ControllerBase where TModel : class
     {
-        private readonly IBaseGetService<TKey, TModel> _baseGetService;
+        private readonly IBaseGetService<TModel> _baseGetService;
         private readonly ILoggerManager _logger;
 
-        public BaseGetController(IBaseGetService<TKey, TModel> baseGetService, ILoggerManager logger)
+        public BaseGetController(IBaseGetService<TModel> baseGetService, ILoggerManager logger)
         {
             _baseGetService = baseGetService;
             _logger = logger;
@@ -31,7 +31,7 @@
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(TKey id)
+        public async Task<IActionResult> GetById(int id)
         {
             try
             {

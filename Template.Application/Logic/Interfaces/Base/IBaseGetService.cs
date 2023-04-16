@@ -1,8 +1,7 @@
-﻿namespace Template.Application.Logic.Interfaces
+﻿namespace Template.Application.Logic.Interfaces;
+
+public interface IBaseGetService<TModel> where TModel : class
 {
-    public interface IBaseGetService<Tkey, TModel> where TModel : class
-    {
-        Task<List<TModel>> GetAllAsync();
-        Task<TModel> GetByIdAsync(Tkey id);
-    }
+    Task<List<TModel>> GetAllAsync();
+    Task<TModel> GetByIdAsync(int id);
 }

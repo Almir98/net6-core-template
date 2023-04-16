@@ -1,10 +1,4 @@
-C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.csproj.AssemblyReference.cache
-C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.AssemblyInfoInputs.cache
-C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.AssemblyInfo.cs
-C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.csproj.CoreCompileInputs.cache
-C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\nlog.config
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\appsettings.json
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Template.API.exe
@@ -38,6 +32,9 @@ C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Microso
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.dll
+C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -68,6 +65,13 @@ C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Templat
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Template.Infrastructure.pdb
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Template.Application.pdb
 C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\Template.Domain.pdb
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.csproj.AssemblyReference.cache
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.AssemblyInfoInputs.cache
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.AssemblyInfo.cs
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.csproj.CoreCompileInputs.cache
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\staticwebassets\msbuild.Template.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\staticwebassets\msbuild.build.Template.API.props
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Template.API.props
@@ -82,7 +86,3 @@ C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\refint\
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.pdb
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\Template.API.genruntimeconfig.cache
 C:\Users\Almir Tihak\source\repos\Template\Template.API\obj\Debug\net7.0\ref\Template.API.dll
-C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\nlog.config
-C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.dll
-C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.Extensions.Logging.dll
-C:\Users\Almir Tihak\source\repos\Template\Template.API\bin\Debug\net7.0\NLog.Web.AspNetCore.dll

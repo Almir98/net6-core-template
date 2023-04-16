@@ -1,3 +1,5 @@
+using MapperConfiguration = Template.API.Extensions.MapperConfiguration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,7 +18,7 @@ builder.Services.AddPersistance(builder.Configuration);
 
 builder.Services.RegisterRepositories();
 
-builder.Services.RegisterServices();
+//builder.Services.RegisterServices();
 
 
 

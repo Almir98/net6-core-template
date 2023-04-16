@@ -1,27 +1,26 @@
-﻿namespace Template.Domain.EFCore
+﻿namespace Template.Domain.EFCore;
+
+public class BaseGetRepository<TEntity> : IBaseGetRepository<TEntity> where TEntity : class
 {
-    public class BaseGetRepository<TKey, TEntity, TContext> : IBaseGetRepository<TKey, TEntity> where TContext : DbContext where TEntity : class
+    public TemplateDbContext _context;
+
+    public BaseGetRepository(TemplateDbContext context)
     {
-        protected readonly TContext _context;
+        _context = context;
+    }
 
-        public BaseGetRepository(TContext context)
-        {
-            _context = context;
-        }
+    public async Task<List<TEntity>> GetAll()
+    {
+        return await _context.Set<TEntity>().AsNoTracking().ToListAsync();
+    }
 
-        public async Task<List<TEntity>> GetAll()
-        {
-            return await _context.Set<TEntity>().AsNoTracking().ToListAsync();
-        }
+    public async Task<TEntity> GetById(int id)
+    {
+        var entity = await _context.Set<TEntity>().FindAsync(id);
 
-        public async Task<TEntity> GetById(TKey id)
-        {
-            var entity = await _context.Set<TEntity>().FindAsync(id);
+        if (entity is null)
+            throw new ArgumentNullException(nameof(entity));
 
-            if (entity is null)
-                throw new ArgumentNullException(nameof(entity));
-
-            return entity;
-        }
+        return entity;
     }
 }
